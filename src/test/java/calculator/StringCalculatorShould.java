@@ -35,4 +35,26 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(6, stringCalculator.add("1\n2,3"));
     }
+
+    @Test
+    public void testNegativeNumver(){
+    	try {
+            StringCalculator stringCalculator = new StringCalculator();
+			stringCalculator.add("-1,2");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -1");
+		}
+
+		try {
+            StringCalculator stringCalculator = new StringCalculator();
+			stringCalculator.add("2,-4,3,-5");
+		}
+		catch (IllegalArgumentException e){
+			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
+		}
+    }
+
+    
+
 }
