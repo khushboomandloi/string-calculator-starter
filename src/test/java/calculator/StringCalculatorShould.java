@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
 
+    public static void main(String args[]) {
+	      org.junit.runner.JUnitCore.main("calculator.StringCalculatorShould");
+	}
+
     @Test
     void empty_string_should_return_0() {
         StringCalculator stringCalculator = new StringCalculator();
@@ -54,7 +58,5 @@ class StringCalculatorShould {
 			assertEquals(e.getMessage(), "Negatives not allowed: -4,-5");
 		}
     }
-
-    
 
 }
