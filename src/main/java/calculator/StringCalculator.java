@@ -17,7 +17,7 @@ class StringCalculator {
 			return sum(numList);
         }
     }
-    private static int sum(String[] numbers) {
+    private int sum(String[] numbers) {
         int total = 0;
         String negString = "";
 
@@ -36,10 +36,10 @@ class StringCalculator {
         }
         return total;
 	}
-	private String[] splitNumbers(String input, String string) {
-		return null;
+	private String[] splitNumbers(String input, String delimiter) {
+		return input.split(delimiter);
 	}
-	private static int toInt(String number){
+	private int toInt(String number){
 		return Integer.parseInt(number);
     }
 }
